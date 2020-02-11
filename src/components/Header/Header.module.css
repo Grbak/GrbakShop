@@ -1,0 +1,54 @@
+    
+
+.topPanel {
+	display: flex;
+	height: 20vh;
+	background-color: #e7e3e3;
+	background-image: url(https://i.ibb.co/0fdjxqv/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-size: 20vh; */
+} 
+
+.bottomPanel {
+	height: 3vh;
+	background-color: #e7e3e3;
+	/* background-color: #e64f4f; */
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu {
+	background-color: #232323;
+	height: 12vh;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.item {
+	font-family: fantasy;
+	font-size: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+
+.item a {
+	color: white;
+	text-decoration: none;
+}
+
+.item a:hover {
+	color: #838181;
+	cursor: pointer;
+	/* border-bottom: 7px red solid; */
+}
+
+.item .activeLink {
+	color: #f3f72b;
+}
+
+.item .activeLink:hover {
+	color: #f3f72b;
+}

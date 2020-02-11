@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: solid #b4b3b3 2px;
+    margin-right: 10%;
+    margin-bottom: 75px;
+    height: 300px;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+
+.wrapper:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+img {
+    height: 300px;
+}
+
+.information {
+    margin-left: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: solid #b4b3b3 1px;
+    padding-bottom: 10px;
+}
+
+.price {
+    margin: 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+}

@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 5px gray solid;
+}
+
+.item p {
+    color: black;
+    flex: 1;
+}
+
+.item img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
