@@ -1,15 +1,6 @@
 import React from 'react';
 import style from './Header.module.css';
-import {NavLink} from 'react-router-dom';
-
-const MenuItem = (props) => {
-    return (
-        <div className={style.item}>
-            <NavLink to={props.path} activeClassName={style.activeLink}> {props.title} </NavLink>
-        </div>
-    );
-};
-
+import MenuItem from './MenuItem/MenuItem';
 
 const Header = () => {
     return(

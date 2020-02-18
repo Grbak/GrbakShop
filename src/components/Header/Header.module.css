@@ -1,5 +1,3 @@
-    
-
 .topPanel {
 	display: flex;
 	height: 20vh;
@@ -24,31 +22,4 @@
 	width: 100%;
 	align-items: center;
 	justify-content: space-around;
-}
-
-.item {
-	font-family: fantasy;
-	font-size: 2em;
-	height: 2em;
-	line-height: 2em;
-	text-align: center;
-}
-
-.item a {
-	color: white;
-	text-decoration: none;
-}
-
-.item a:hover {
-	color: #838181;
-	cursor: pointer;
-	/* border-bottom: 7px red solid; */
-}
-
-.item .activeLink {
-	color: #f3f72b;
-}
-
-.item .activeLink:hover {
-	color: #f3f72b;
 }

@@ -10,13 +10,13 @@ import Services from './components/Services/Services';
 import Shipping from './components/Shipping/Shipping';
 import Contacts from './components/Contacts/Contacts';
 
-function App() {
+function App(props) {
   return (
   <BrowserRouter>
     <div class='page'>
       <Header />
        <Route path='/MainPage' component={MainPage}/>
-       <Route path='/Catalog' component={Catalog}/>
+       <Route path='/Catalog' render={ () => <Catalog products={props.products} brands={props.brands}/> }/>
        <Route path='/Stocks' component={Stocks}/>
        <Route path='/Services' component={Services}/>
        <Route path='/Shipping' component={Shipping}/>
