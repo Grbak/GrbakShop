@@ -3,6 +3,7 @@
 	height: 20vh;
 	background-color: #e7e3e3;
 	background-image: url(https://i.ibb.co/0fdjxqv/logo.png);
+	background-size: 25vh auto;
 	background-repeat: no-repeat;
 	background-position: center;
 	/* background-size: 20vh; */
@@ -11,12 +12,13 @@
 .bottomPanel {
 	height: 3vh;
 	background-color: #e7e3e3;
-	/* background-color: #e64f4f; */
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .menu {
 	background-color: #232323;
+	/* background-color: #e7e3e3; */
+	font-size: 0.9vw;
 	height: 12vh;
 	display: flex;
 	width: 100%;

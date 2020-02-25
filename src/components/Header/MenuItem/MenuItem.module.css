@@ -1,14 +1,16 @@
 .item {
 	font-family: fantasy;
 	font-size: 2em;
-	height: 2em;
-	line-height: 2em;
+	height: 12vh;
+	line-height: 12vh;
 	text-align: center;
 }
 
 .item a {
 	color: white;
 	text-decoration: none;
+	height: 12vh;
+
 }
 
 .item a:hover {
@@ -18,9 +20,11 @@
 }
 
 .item .activeLink {
-	color: #f3f72b;
+	height: 12vh;
+	/* color: #f3f72b; */
+	border-bottom: solid 5px white;
 }
 
 .item .activeLink:hover {
-	color: #f3f72b;
+	color: white;
 }

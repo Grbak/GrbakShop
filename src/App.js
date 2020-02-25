@@ -16,8 +16,8 @@ function App(props) {
     <div class='page'>
       <Header />
        <Route path='/MainPage' component={MainPage}/>
-       <Route path='/Catalog' render={ () => <Catalog products={props.products} brands={props.brands}/> }/>
-       <Route path='/Stocks' component={Stocks}/>
+       <Route path='/Catalog' render={ () => <Catalog state={props.state.catalogPage}/> }/>
+       <Route path='/Stocks'render={ () => <Stocks state={props.state.stocksPage}/> }/>
        <Route path='/Services' component={Services}/>
        <Route path='/Shipping' component={Shipping}/>
        <Route path='/Contacts' component={Contacts}/>
