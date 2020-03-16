@@ -1,0 +1,28 @@
+import React from 'react';
+import {NavLink} from 'react-router-dom';
+import style from './Product.module.css';
+
+
+const Product = (props) => {
+
+    let path = `product/${props.productId}`;
+
+    return(        
+        <div className={style.wrapper}>
+            <NavLink to={path}>
+                <div className={style.imgContainer}>
+                    <img src={props.photo}></img>
+                </div>
+                <div className = {style.information}>
+                    <div className={style.titleOfProduct}> {props.name} </div>
+                    <div>
+                    <p className={style.price}> {props.price} </p>
+                    </div>
+                    {/* <div className={style.addToCart}>В корзину</div> */}
+                </div>
+            </NavLink>
+        </div>
+    )
+};
+
+export default Product;

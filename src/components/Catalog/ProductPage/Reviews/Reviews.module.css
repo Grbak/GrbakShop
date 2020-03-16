@@ -1,0 +1,31 @@
+.wrapper {
+    background-color: #b4b3b3;
+    border: 1px solid #232323;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.newComment {
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.newComment textarea {
+    resize: none;
+}
+
+.comments {
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: green;
+    margin: 5%;
+}
+
+
+/* .newReview button {
+    width: 30%;
+} */

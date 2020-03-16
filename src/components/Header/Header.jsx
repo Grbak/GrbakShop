@@ -5,15 +5,17 @@ import MenuItem from './MenuItem/MenuItem';
 const Header = () => {
     return(
         <div className={style.header}>
-            <div className={style.topPanel}></div>
-            <div className={style.menu}>
-                <MenuItem path='/Catalog' title='Каталог' />
-                <MenuItem path='/Stocks' title='Акции' />
-                <MenuItem path='/Services' title='Услуги' />
-                <MenuItem path='/Shipping' title='Доставка и оплата' />
-                <MenuItem path='/Contacts' title='Контакты' />
+            <div className={style.topPanel}>
+
             </div>
-            <div className={style.bottomPanel}></div>
+            <div className={style.logoPanel}></div>
+            <div className={style.menu}>
+                <MenuItem path='/catalog' title='Каталог' />
+                <MenuItem path='/stocks' title='Акции' />
+                <MenuItem path='/services' title='Услуги' />
+                <MenuItem path='/shipping' title='Доставка' />
+                <MenuItem path='/contacts' title='Контакты' />
+            </div>
         </div>
     )
 };

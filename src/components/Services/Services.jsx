@@ -3,7 +3,7 @@ import style from './Services.module.css';
 
 const Services = () => {
     return (
-        <div>
+        <div className={style.wrapper}>
             sda
         </div>
     );

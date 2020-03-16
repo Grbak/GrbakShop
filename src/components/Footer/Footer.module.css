@@ -3,11 +3,11 @@
 	color: white;
 	padding-top: 0px;
 	/* background: url(MUSIC/heart.jpg) left center no-repeat; */
-	background-color: #232323;
+	background-color: #e7e3e3;
 	background-size: 15vh auto;
     height: 20vh;
+    margin-top: 15vh;
     position: relative;
-    /* bottom: 0; */
     width: 100%;
 }
     
