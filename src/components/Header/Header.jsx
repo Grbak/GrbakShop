@@ -5,9 +5,9 @@ import MenuItem from './MenuItem/MenuItem';
 const Header = () => {
     return(
         <div className={style.header}>
-            <div className={style.topPanel}>
+            {/* <div className={style.topPanel}>
 
-            </div>
+            </div> */}
             <div className={style.logoPanel}></div>
             <div className={style.menu}>
                 <MenuItem path='/catalog' title='Каталог' />

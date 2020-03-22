@@ -1,11 +1,13 @@
 
 .wrapper {
     display: flex;
-    background-color: #f3f4f5;
+    /* background-color: #f3f4f5; */
+    background-color: #f8f8f8;
+    border: solid 1px #e7e7e7;
     margin-left: 3%;
     padding-bottom: 3%;
     width: auto;
-    min-width: 55vw;
+    min-width: 60vw;
 }
 
 .imgContainer {
@@ -33,28 +35,35 @@
     display: flex;
     flex-direction: column;
     margin-right: 5vw;
+    width: 35vw;
 }
 
 .menu {
     display: flex;
+    margin-bottom: 2vw;
+    border: solid 1px #e7e7e7;
 }
 
 .menu a {
+    text-align: center;
+    flex: 1;
     font-size: 1.3vw;
-    background-color: #f3f4f5;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    background-color: white;
     height: 6vh;
     line-height: 6vh;
 }
 
 .menu a:hover {
     cursor: pointer;
-    background-color: #b4b3b3;
 }
 
-.menu a:active {
+/* .menu a:active {
     background-color: #232323;
     color: white;
+} */
+
+.activeLink {
+	border-bottom: 3px solid red;
 }
+
 

@@ -32,9 +32,10 @@
 .assortment div:hover {
     margin-left: 0px;
     margin-right: 0px;
-    color: #3ccbe4;
+    /* color: #3ccbe4; */
     cursor: pointer;
-    border-bottom: 1px solid #3ccbe4;
+    /* border-bottom: 1px solid #3ccbe4; */
+    border-bottom: 1px solid #6fa8dc;
 }
 
 .pages {

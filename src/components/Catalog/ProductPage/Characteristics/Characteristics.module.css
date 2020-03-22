@@ -1,4 +1,9 @@
 .wrapper {
-    background-color: blue;
+    background-color: #ffffff;
+    border: solid 1px #e7e7e7;
     flex: auto;
+}
+
+li span {
+    font-weight: 700;
 }

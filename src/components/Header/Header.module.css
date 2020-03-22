@@ -23,9 +23,8 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	border-top: 1px solid #b4b3b3;
-	border-bottom: 1px solid #b4b3b3;
-	/* box-shadow: 0 0 1px rgba(0,0,0,0.5); */
+	border-top: 1px solid #b3b3b4;
+	border-bottom: 1px solid #b3b3b4;
 }
 
 .auth {

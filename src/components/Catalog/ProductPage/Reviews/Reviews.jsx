@@ -8,8 +8,8 @@ const Reviews = (props) => {
 
     let newComment = React.createRef();
 
-    let addComment = function() {
-        props.addComment(props.currentProduct.productId);
+    let addComment = () => {
+        props.addComment();
     };
 
     let onCommentChange = () => {

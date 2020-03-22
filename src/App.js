@@ -10,7 +10,7 @@ function App(props) {
     <div class='page'>
       <BrowserRouter>
         <Header />
-        <MainPage state={props.state} changingTab={props.changingTab} addComment={props.addComment} updateNewCommentText={props.updateNewCommentText}/>
+        <MainPage state={props.state} store={props.store}/>
       </BrowserRouter>
     </div>
   );

@@ -1,5 +1,11 @@
 .wrapper {
     padding: 2vw;
-    background-color: blue;
+    padding-top: 1vw;
+    background-color: #ffffff;
+    border: solid 1px #e7e7e7;
     flex: auto;
+}
+
+.wrapper p {
+    margin: 0px;
 }

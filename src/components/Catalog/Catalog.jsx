@@ -2,13 +2,13 @@ import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import style from './Catalog.module.css';
 import Assortment  from './Assortment/Assortment';
-import ProductPage from './ProductPage/ProductPage';
+import ProductPageContainer from './ProductPage/ProductPageContainer';
 
 
 const Catalog = (props) => {
-
-    let BrandsElements = props.state.brands.map(b => <div> {b} </div> );
-    let ProductsRoutes = props.state.products.map(p => ( <Route exact path={`/product/${p.productId}`} render={ () => <ProductPage productId={p.productId} state={props.state.products} newCommentText={props.state.newCommentText} changingTab={props.changingTab} addComment={props.addComment} updateNewCommentText={props.updateNewCommentText}/>  } />));
+    
+    let BrandsElements = props.store.getState().catalogPage.brands.map(b => <div> {b} </div> );
+    let ProductsRoutes = props.store.getState().catalogPage.products.map(p => ( <Route exact path={`/product/${p.productId}`} render={ () => <ProductPageContainer productId={p.productId} store={props.store}/>  } />));
 
     return(
         <div className={style.wrapper}>
@@ -19,7 +19,7 @@ const Catalog = (props) => {
                     </div>
                 </div>
                 <BrowserRouter>
-                    <Route exact path='/catalog' render={ () => <Assortment state={props.state.products}/>} />
+                    <Route exact path='/catalog' render={ () => <Assortment state={props.store.getState().catalogPage.products}/>} />
                     { ProductsRoutes }
                 </BrowserRouter>
         </div>

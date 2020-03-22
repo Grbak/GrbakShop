@@ -13,7 +13,7 @@ const MainPage = (props) => {
     return (
         <div className={style.wrapper}>
                 <Route path='/mainPage' component={MainPage}/>
-                <Route path='/catalog' render={ () => <Catalog state={props.state.catalogPage} changingTab={props.changingTab} addComment={props.addComment} updateNewCommentText={props.updateNewCommentText}/> }/>
+                <Route path='/catalog' render={ () => <Catalog store={props.store}/> }/>
                 <Route path='/stocks'render={ () => <Stocks state={props.state.stocksPage}/> }/>
                 <Route path='/services' component={Services}/>
                 <Route path='/shipping' component={Shipping}/>
