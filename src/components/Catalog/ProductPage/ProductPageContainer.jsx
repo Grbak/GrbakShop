@@ -1,18 +1,24 @@
-import React from 'react';
+import {connect} from 'react-redux';
 
 import ProductPage from './ProductPage';
+import {changeTab} from '../../../redux/catalogReducer';
 
-import { changeTabActionCreator } from '../../../redux/catalogReducer';
-
-const ProductPageContainer = (props) => {
-
-    let currentProduct = props.store.getState().catalogPage.products.find( p => { if(p.productId == props.productId) return true});
-
-    let changeTab = () => {
-        props.store.dispatch(changeTabActionCreator());
+let mapStateToProps = (state) => {
+    return {
+        products: state.catalogPage.products,
+        pageSize: state.catalogPage.pageSize,
+        currentTab: state.catalogPage.currentTab,
     };
-
-    return(<ProductPage store={props.store} changeTab={changeTab} currentProduct={currentProduct}/>);
 };
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        changeTab: (flag) => {
+            dispatch(changeTab(flag));
+        },
+    };
+};
+
+const ProductPageContainer = connect(mapStateToProps, mapDispatchToProps)(ProductPage);
 
 export default ProductPageContainer;

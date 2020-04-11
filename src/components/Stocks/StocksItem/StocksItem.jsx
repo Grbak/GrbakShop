@@ -3,7 +3,7 @@ import style from './StocksItem.module.css'
 
 const StocksItem = (props) => {
     return (
-        <div className={style.item}>
+        <div className={style.wrapper}>
             <img src={props.source}></img>
             <p> {props.description} </p>
         </div>

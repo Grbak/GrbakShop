@@ -1,11 +1,11 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import style from './Product.module.css';
 
+import style from './Product.module.css';
 
 const Product = (props) => {
 
-    let path = `product/${props.productId}`;
+    let path = `catalog/${props.productId}`;
 
     return(        
         <div className={style.wrapper}>
@@ -16,9 +16,13 @@ const Product = (props) => {
                 <div className = {style.information}>
                     <div className={style.titleOfProduct}> {props.name} </div>
                     <div>
-                    <p className={style.price}> {props.price} </p>
+                        <div className={style.priceAndCart}> 
+                            <div className={style.price}>{props.price}</div>
+                            {/* <div className={style.cart}>
+                                В корзину
+                            </div>  */}
+                        </div>
                     </div>
-                    {/* <div className={style.addToCart}>В корзину</div> */}
                 </div>
             </NavLink>
         </div>

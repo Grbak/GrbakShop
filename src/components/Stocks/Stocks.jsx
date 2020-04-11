@@ -5,7 +5,7 @@ import StocksItem from './StocksItem/StocksItem'
 
 const Stocks = (props) => {
 
-    let StocksElements = props.state.stocksData.map(s => <StocksItem source={s.source} description={s.description} />);
+    let StocksElements = props.stocksData.map(s => <StocksItem source={s.source} description={s.description} />);
 
     return (
         <div className={style.wrapper}>

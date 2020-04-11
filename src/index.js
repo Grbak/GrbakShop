@@ -5,9 +5,14 @@ import ReactDOM from 'react-dom';
 import store from './redux/redux-state.js';
 import App from './App';
 import './index.css';
+import {Provider} from 'react-redux';
 
-let rerenderEntireTree = (state) => {
-    ReactDOM.render(<App state={state} store={store}/>, document.getElementById('root'));
+let rerenderEntireTree = () => {
+    ReactDOM.render(
+        <Provider store={store}>
+            <App />
+        </Provider>, document.getElementById('root'));
+
 };
 
 rerenderEntireTree(store.getState());

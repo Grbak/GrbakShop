@@ -1,34 +1,26 @@
 .wrapper {
-    height: 60vh;
-    width: 15vw;
-    margin-bottom: 0.5vw;
-    margin-right: 0.5vw;
-    /* border: solid #b4b3b3 1px; */
-    background-color: #f3f4f5;
+    height: 27vw;
+    width: 16vw;
+    /* margin-bottom: 0.5vw;
+    margin-right: 0.5vw; */
+    background-color: #f9f9f9;
+    border: solid 1px #e7e7e7;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Arial;
 }
 
 a {
     color: #232323;
     text-decoration: none;
-    
 }
 
-.wrapper:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.02);
-    /* outline: 2px solid #b4b3b3;
-    outline-offset: -2px;
-    cursor: pointer; */
+/* .wrapper:hover {
     background-color: #e2e3e4;
-    /* border: solid #e7554b 1px; */
-    /* background-color: #5ecadd; */
-}
+    border: solid 1px #cccccc;
+} */
 
 .imgContainer {
-    border-bottom: solid #b4b3b3 1px;
+    /* border-bottom: solid #9c9cb1 1px; */
     padding-bottom: 5%;
     width: 80%;
     margin-left: 10%;
@@ -39,27 +31,72 @@ a {
     max-width: 12vw;
     text-align: center;
     margin-top: 10%;
-    height: 40vh;
+    height: 15vw;
 }
 
 .information {
-    margin: 10%;
-    margin-top: 2%;
+    padding: 10%;
+    padding-top: 2%;
+    height: 10vw;
 }
 
 .titleOfProduct {
+    color: #5d5e61;
     font-size: 1vw;
     font-weight: 700;
-    height: 5vh;
+    height: 4vw;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 1vw;
+}
+
+/* .titleOfProduct:hover {
+    color: #4b7ec2;
+} */
+
+.priceAndCart {
+    display: flex;
+    align-items: center;
 }
 
 .price {
     text-align: left;
-    font-size: 1.2vw;
-    font-weight: 700;
+    flex: 1;
+    font-family: impact;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    font-weight: 520;
 }
+
+.cart {
+    text-align: right;
+    flex: 1;
+    /* height: 3.2vw;
+    border-radius: 50%; */
+}
+
+.cart {
+    color: white;
+    line-height: 1vw;
+    font-size: 1vw;
+    text-align: center;
+    background-color: #4b81c9;
+    border: 1px solid #3d679e;
+    padding-top: 0.40vw;
+    padding-bottom: 0.40vw;
+    border-radius: 4px 4px;
+    /* border: 1px solid green; */
+}
+
+.cart:hover {
+    background-color: #3d679e;
+}
+
+.cart img {
+    height: 2.2vw;
+    width: auto;
+}
+
+
 
 .available {
     color:  green   

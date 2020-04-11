@@ -1,16 +1,18 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
 import Header from './components/Header/Header';
 import MainPage from './components/MainPage/MainPage';
-import { BrowserRouter } from 'react-router-dom';
 
 
-function App(props) {
+
+function App() {
   return (
     <div class='page'>
       <BrowserRouter>
         <Header />
-        <MainPage state={props.state} store={props.store}/>
+        <MainPage />
       </BrowserRouter>
     </div>
   );

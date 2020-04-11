@@ -2,15 +2,19 @@
 .wrapper {
     display: flex;
 	color: black;
-	background-color: white;
+	background-color: #e8eaf0;
     background-size: 15vh auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 6%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 8%;
+    padding-bottom: 15vh;
 }
 
-.menu {
+
+/* .menu {
     width: 18vw;
+    background-color: #f8f8f8;
+    border: solid 1px #e7e7e7;
 }
 
 .assortment {
@@ -20,21 +24,21 @@
 .assortment div {
     height: 7vh;
     line-height: 7vh;
-    /* background-color: #e7e3e3; */
-    font-size: 1.2vw;
+    background-color: #e7e3e3;
+    font-size: 1.4vw;
     border-bottom: 1px solid #b4b3b3;
     margin-left: 15%;
     margin-right: 15%;
     font-family: serif;
-    /* box-shadow: 0 0 5px rgba(0,0,0,0.5); */
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .assortment div:hover {
     margin-left: 0px;
     margin-right: 0px;
-    /* color: #3ccbe4; */
+    color: #3ccbe4;
     cursor: pointer;
-    /* border-bottom: 1px solid #3ccbe4; */
+    border-bottom: 1px solid #3ccbe4;
     border-bottom: 1px solid #6fa8dc;
 }
 
@@ -51,4 +55,4 @@
     font-size: 1.5vw;
     font-weight: 1000;
     margin-bottom: 3vh;
-}
+} */

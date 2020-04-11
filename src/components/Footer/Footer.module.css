@@ -2,12 +2,12 @@
     display: flex;
 	color: white;
 	padding-top: 0px;
-	/* background: url(MUSIC/heart.jpg) left center no-repeat; */
-	background-color: #e7e3e3;
-	background-size: 15vh auto;
     height: 20vh;
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     position: relative;
     width: 100%;
+    border-top: 1px solid #b3b3b4;
+    /* background-color: #e7e3e3; */
+    background-color: white;
 }
     

@@ -16,18 +16,29 @@
 } 
 
 .menu {
-	background-color: #e7e3e3;
 	font-size: 0.9vw;
-	height: 8vh;
+	height: 13vh;
 	display: flex;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
+	/* background-color: #dadada;
 	border-top: 1px solid #b3b3b4;
-	border-bottom: 1px solid #b3b3b4;
+	border-bottom: 1px solid #b3b3b4; */
+    border-bottom: 1px solid #b3b3b4;
+	/* background-color: #e3e3e3; */
+	background-color: white;
+}
+
+.menu img {
+	height: 13vh;
 }
 
 .auth {
 	right: 0px;
 	background-color: #232323;
+}
+
+.space {
+	width: 100%;
 }

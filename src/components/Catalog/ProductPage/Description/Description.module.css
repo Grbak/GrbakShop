@@ -1,7 +1,7 @@
 .wrapper {
     padding: 2vw;
     padding-top: 1vw;
-    background-color: #ffffff;
+    background-color: white;
     border: solid 1px #e7e7e7;
     flex: auto;
 }

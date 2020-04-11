@@ -1,29 +1,48 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import style from './Catalog.module.css';
-import Assortment  from './Assortment/Assortment';
+import AssortmentContainer  from './Assortment/AssortmentContainer';
 import ProductPageContainer from './ProductPage/ProductPageContainer';
-
 
 const Catalog = (props) => {
     
-    let BrandsElements = props.store.getState().catalogPage.brands.map(b => <div> {b} </div> );
-    let ProductsRoutes = props.store.getState().catalogPage.products.map(p => ( <Route exact path={`/product/${p.productId}`} render={ () => <ProductPageContainer productId={p.productId} store={props.store}/>  } />));
+    let ProductsRoutes = props.products.map(p => ( <Route path={`/catalog/${p.productId}`} render={() => <ProductPageContainer productId={p.productId} />} />));
+
+    console.log(ProductsRoutes);
 
     return(
         <div className={style.wrapper}>
-                <div className={style.menu}>
-                    <div className={style.title}>Бренды</div>
-                    <div className={style.assortment}>
-                        {BrandsElements}
-                    </div>
-                </div>
-                <BrowserRouter>
-                    <Route exact path='/catalog' render={ () => <Assortment state={props.store.getState().catalogPage.products}/>} />
+                <Switch>
+                    <Route exact path='/catalog' render={() => <AssortmentContainer />} />
                     { ProductsRoutes }
-                </BrowserRouter>
+                </Switch>
         </div>
     )
 };
+
+// class Catalog extends React.Component {
+
+//     constructor(props) {
+//         super(props);
+//         this.ProductsRoutes = props.catalogPage.products.map(p => ( <Route path={`/catalog/${p.productId}`} render={() => <ProductPageContainer productId={p.productId} />} />));
+//         axios.get('http://127.0.0.1:8000/products')
+//             .then(response => {
+//                 // console.log(response);
+//                 this.props.setProducts(response.data);
+//             });
+//         console.log('OK');
+//     }
+
+//     render() {
+//         return(
+//             <div className={style.wrapper}>
+//                     <Switch>
+//                         <Route exact path='/catalog' render={ () => <Assortment state={this.props.catalogPage.products}/>} />
+//                         {this.ProductsRoutes}
+//                     </Switch>
+//             </div>
+//         )
+//     }
+// }
 
 export default Catalog;
