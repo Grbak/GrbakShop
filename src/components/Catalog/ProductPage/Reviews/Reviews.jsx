@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import * as axios from 'axios';
 
 import style from './Reviews.module.css';
 import Comment from './Comment/Comment';
@@ -12,7 +13,20 @@ const Reviews = (props) => {
 
     let addComment = () => {
         let currentMoment = moment();
-        props.addComment(props.currentProduct.productId, currentMoment);
+        let year = currentMoment.year();
+        let month = currentMoment.month();
+        let day = currentMoment.date();
+        let text = props.newCommentText;
+        let productId = props.currentProduct.productId;
+
+        let body = {year, month, day, text, productId};
+
+        axios.post('http://127.0.0.1:8000/products', {year, month, day, text, productId}).then((response) => {
+            console.log(response);
+            if(response.data.isSuccessfull) {
+                props.addComment(props.currentProduct.productId, currentMoment);
+            }
+        });
     };
 
     let onCommentChange = (event) => {

@@ -5,10 +5,9 @@ import AssortmentContainer  from './Assortment/AssortmentContainer';
 import ProductPageContainer from './ProductPage/ProductPageContainer';
 
 const Catalog = (props) => {
+
     
     let ProductsRoutes = props.products.map(p => ( <Route path={`/catalog/${p.productId}`} render={() => <ProductPageContainer productId={p.productId} />} />));
-
-    console.log(ProductsRoutes);
 
     return(
         <div className={style.wrapper}>

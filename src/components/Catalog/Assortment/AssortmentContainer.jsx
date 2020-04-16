@@ -26,6 +26,7 @@ class AssortmentAPIComponent extends React.Component {
 
     componentWillUnmount() {
         this.props.setCurrentPage(1);
+        // this.props.setProducts([]);
     }
 
     render() {

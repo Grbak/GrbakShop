@@ -11,6 +11,8 @@ const ProductPage = (props) => {
 
     let currentProduct = props.products[(props.productId - 1) % props.pageSize];
 
+    console.log(props);
+
     // let currentProduct = props.products.find(p => {if(p.productId === props.productId) {return p}});
 
     const CurrentTab = () => {

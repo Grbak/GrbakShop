@@ -17,10 +17,10 @@ const Product = (props) => {
                     <div className={style.titleOfProduct}> {props.name} </div>
                     <div>
                         <div className={style.priceAndCart}> 
-                            <div className={style.price}>{props.price}</div>
-                            {/* <div className={style.cart}>
-                                В корзину
-                            </div>  */}
+                            <div className={style.price}>{props.price} ₽</div>
+                            <div className={style.cart}>
+                                Купить
+                            </div> 
                         </div>
                     </div>
                 </div>

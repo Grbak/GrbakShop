@@ -17,7 +17,7 @@
 .menu {
     background-color: #f9f9f9;
     border: solid 1px #e7e7e7;
-    height: 60vh;
+    height: 35vw;
 }
 
 .pagination {
@@ -27,8 +27,8 @@
 }
 
 .page {
-    /* background-color: #f9f9f9;
-    border: 1px solid #e7e7e7; */
+    background-color: #f9f9f9;
+    border: 1px solid #e7e7e7;
     padding: 1.5%;
     padding-top: 0.8%;
     padding-bottom: 0.8%;
@@ -37,8 +37,8 @@
 }
 
 .currentPage {
-    /* background-color: #1e68c9;
-    color: white; */
+    background-color: #f9f9f9;
+    border: 1px solid #e7e7e7;
     color: #1e68c9;
     padding: 1.5%;
     padding-top: 0.8%;
@@ -49,7 +49,7 @@
 
 .page:hover {
     cursor: pointer;
-    /* background-color: #e2e3e4;
-    border: solid 1px #cccccc; */
+    background-color: #e2e3e4;
+    border: solid 1px #cccccc;
 }
 

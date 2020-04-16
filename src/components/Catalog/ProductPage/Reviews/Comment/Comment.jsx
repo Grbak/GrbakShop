@@ -8,6 +8,7 @@ const Comment = (props) => {
     let userName = 'Гость';
 
     let time = moment(props.time);
+    // console.log(time);
 
     return(
         <div className={style.wrapper}>

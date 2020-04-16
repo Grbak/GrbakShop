@@ -4,7 +4,6 @@ import Catalog from './Catalog';
 import {setProducts, setCurrentPage} from '../../redux/catalogReducer';
 
 let mapStateToProps = (state) => {
-    console.log('КАТАЛОГ ПЕРЕРИСУЕТСЯ', state.catalogPage.products);
     return {
         products: state.catalogPage.products,
     };
