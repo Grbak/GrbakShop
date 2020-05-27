@@ -14,14 +14,15 @@ const Product = (props) => {
                     <img src={props.photo}></img>
                 </div>
                 <div className = {style.information}>
-                    <div className={style.titleOfProduct}> {props.name} </div>
-                    <div>
-                        <div className={style.priceAndCart}> 
-                            <div className={style.price}>{props.price} ₽</div>
-                            <div className={style.cart}>
-                                Купить
-                            </div> 
-                        </div>
+                    <div className={style.titles}>
+                        <div className={style.titleOfProduct}> {props.name} </div>
+                        <div className={style.kindOfProduct}> {props.kind} </div>
+                    </div>
+                    <div className={style.priceAndCart}> 
+                        <div className={style.price}>{props.price} ₽</div>
+                        {/* <div className={style.cart}>
+                            Купить
+                        </div>  */}
                     </div>
                 </div>
             </NavLink>

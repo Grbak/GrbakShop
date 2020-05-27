@@ -1,14 +1,15 @@
-import {createStore, combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
 import catalogReducer from './catalogReducer';
-import stocksReducer from './stocksReducer';
 import brandsReducer from './brandsReducer';
+import authReducer from './authReducer';
+import ReduxThunk from 'redux-thunk';
 
 let reducers = combineReducers({
     catalogPage: catalogReducer,
-    stocksPage: stocksReducer,
     brandsPage: brandsReducer,
+    auth: authReducer,
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(ReduxThunk));
 
 export default store;

@@ -19,9 +19,7 @@ const Reviews = (props) => {
         let text = props.newCommentText;
         let productId = props.currentProduct.productId;
 
-        let body = {year, month, day, text, productId};
-
-        axios.post('http://127.0.0.1:8000/products', {year, month, day, text, productId}).then((response) => {
+        axios.post('http://127.0.0.1:8000/comments', {year, month, day, text, productId}).then((response) => {
             console.log(response);
             if(response.data.isSuccessfull) {
                 props.addComment(props.currentProduct.productId, currentMoment);

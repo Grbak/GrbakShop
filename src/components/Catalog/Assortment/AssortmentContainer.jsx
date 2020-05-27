@@ -1,32 +1,36 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as axios from 'axios';
 
 import Assortment from './Assortment';
-import {setProducts, setCurrentPage, setProductsCount} from '../../../redux/catalogReducer';
+import {setCurrentPage,  setFilter, setSortDirection, setSortParameter, getProductsThunk, getBrandsThunk} from '../../../redux/catalogReducer';
 
 
 class AssortmentAPIComponent extends React.Component {
 
-    onPageChanged = (pageNumber) => {
-        this.props.setCurrentPage(pageNumber);
-        axios.get(`http://127.0.0.1:8000/products?page=${pageNumber}&count=${this.props.catalogPage.pageSize}`)
-            .then(response => {
-                this.props.setProducts(response.data.products);
-        });
+    constructor(props) {
+    super(props);
+    this.sort = this.sort.bind(this);
     }
 
     componentDidMount() {
-        axios.get(`http://127.0.0.1:8000/products?page=${this.props.catalogPage.currentPage}&count=${this.props.catalogPage.pageSize}`)
-        .then(response => {
-        this.props.setProducts(response.data.products);
-        this.props.setProductsCount(response.data.productsCount);
-        });
+        this.props.getBrandsThunk();
+        this.props.getProductsThunk(this.props.currentPage, this.props.pageSize, this.props.filter, this.props.sortParameter, this.props.sortDirection);
     }
 
     componentWillUnmount() {
         this.props.setCurrentPage(1);
-        // this.props.setProducts([]);
+        this.props.setFilter({ brands: []});
+    }
+
+    onPageChanged = (pageNumber) => {
+        this.props.setCurrentPage(pageNumber);
+        this.props.getProductsThunk(pageNumber, this.props.pageSize, this.props.filter, this.props.sortParameter, this.props.sortDirection);
+    }
+
+    sort(newFilter) {
+        this.props.setFilter(newFilter);
+        this.props.setCurrentPage(1);
+        this.props.getProductsThunk(1, this.props.pageSize, newFilter, this.props.sortParameter, this.props.sortDirection);
     }
 
     render() {
@@ -34,16 +38,27 @@ class AssortmentAPIComponent extends React.Component {
                            productsCount={this.props.catalogPage.productsCount}
                            pageSize={this.props.catalogPage.pageSize}
                            currentPage={this.props.catalogPage.currentPage}
-                           onPageChanged={this.onPageChanged} />;
-
+                           brands={this.props.catalogPage.brands}
+                           onPageChanged={this.onPageChanged} 
+                           sort={this.sort}
+                           isFetching={this.props.isFetching}
+                           sortParameter={this.props.sortParameter}
+                           setSortParameter={this.props.setSortParameter}
+                           sortDirection={this.props.sortDirection}
+                           setSortDirection={this.props.setSortDirection}/>;
     }
 };
-
 
 
 let mapStateToProps = (state) => {
     return {
         catalogPage: state.catalogPage,
+        currentPage: state.catalogPage.currentPage,
+        pageSize: state.catalogPage.pageSize,
+        filter: state.catalogPage.sortParams.filter,
+        sortParameter: state.catalogPage.sortParams.parameter,
+        sortDirection: state.catalogPage.sortParams.direction,
+        isFetching: state.catalogPage.isFetching,
     };
 };
 
@@ -61,6 +76,12 @@ let mapStateToProps = (state) => {
 //     };
 // };
 
-const AssortmentContainer = connect(mapStateToProps, {setProducts, setCurrentPage, setProductsCount})(AssortmentAPIComponent);
+const AssortmentContainer = connect(mapStateToProps, 
+    {setCurrentPage, 
+    setFilter,
+    setSortDirection,
+    setSortParameter, 
+    getProductsThunk, 
+    getBrandsThunk})(AssortmentAPIComponent);
 
 export default AssortmentContainer;
